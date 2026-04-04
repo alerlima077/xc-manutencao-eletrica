@@ -1,0 +1,628 @@
+/* ============================================ */
+/* XC MANUTENÇÃO ELÉTRICA - ESTILOS GLOBAIS    */
+/* Paleta: Azul (#0052A1), Amarelo (#FFC107)   */
+/* ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #FFFFFF;
+  color: #1A1A1A;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============================================ */
+/* BOTÕES FLUTUANTES                            */
+/* ============================================ */
+
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fab-whatsapp {
+  background: #25D366;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.fab-whatsapp:hover {
+  transform: scale(1.1);
+  background: #128C7E;
+}
+
+.fab-whatsapp img {
+  width: 32px;
+  height: 32px;
+}
+
+.fab-share {
+  background: #0052A1;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  color: white;
+}
+
+.fab-share:hover {
+  transform: scale(1.1);
+  background: #003d7a;
+}
+
+/* ============================================ */
+/* CABEÇALHO                                    */
+/* ============================================ */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 100;
+  padding: 15px 0;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  max-height: 50px;
+  width: auto;
+}
+
+.nav-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #1A1A1A;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-list li a:hover {
+  color: #0052A1;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #0052A1;
+}
+
+/* ============================================ */
+/* HERO                                         */
+/* ============================================ */
+
+.hero {
+  padding: 140px 0 80px;
+  background: linear-gradient(135deg, #0052A1 0%, #003d7a 100%);
+  color: white;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-title .highlight {
+  color: #FFC107;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  opacity: 0.9;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: #FFC107;
+  color: #1A1A1A;
+}
+
+.btn-primary:hover {
+  background: #e6a800;
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: #0052A1;
+  transform: scale(1.05);
+}
+
+.btn-large {
+  padding: 16px 40px;
+  font-size: 1.1rem;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #FFC107;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* ============================================ */
+/* SERVIÇOS                                     */
+/* ============================================ */
+
+.servicos {
+  padding: 80px 0;
+  background: #F8F9FA;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #0052A1;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.servico-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.servico-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.servico-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.servico-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #0052A1;
+}
+
+.servico-card p {
+  color: #666;
+}
+
+/* ============================================ */
+/* DIFERENCIAIS                                 */
+/* ============================================ */
+
+.diferenciais {
+  padding: 80px 0;
+  background: #1A1A1A;
+  color: white;
+}
+
+.diferenciais .section-title {
+  color: white;
+}
+
+.diferenciais-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.diferencial-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.diferencial-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.diferencial-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #FFC107;
+}
+
+.diferencial-item p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/* ============================================ */
+/* GALERIA                                      */
+/* ============================================ */
+
+.galeria {
+  padding: 80px 0;
+  background: #F8F9FA;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.galeria-item {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.galeria-item img:hover {
+  transform: scale(1.05);
+}
+
+.galeria-message, .videos-message {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  background: rgba(0,82,161,0.1);
+  border-radius: 10px;
+  color: #0052A1;
+  font-size: 0.9rem;
+}
+
+/* ============================================ */
+/* VÍDEOS                                       */
+/* ============================================ */
+
+.videos {
+  padding: 80px 0;
+  background: white;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.video-card {
+  background: #F8F9FA;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.video-placeholder {
+  background: #e9ecef;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #666;
+}
+
+.video-placeholder span {
+  font-size: 48px;
+}
+
+.video-card h3 {
+  padding: 15px;
+  font-size: 1rem;
+  color: #0052A1;
+}
+
+/* ============================================ */
+/* CTA (CHAMADA PARA AÇÃO)                     */
+/* ============================================ */
+
+.cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #0052A1 0%, #003d7a 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* ============================================ */
+/* CONTATO                                      */
+/* ============================================ */
+
+.contato {
+  padding: 80px 0;
+  background: #F8F9FA;
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.contato-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.contato-item span {
+  font-size: 24px;
+}
+
+.contato-item a {
+  text-decoration: none;
+  color: #0052A1;
+  font-weight: 500;
+}
+
+.contato-item a:hover {
+  text-decoration: underline;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contato-form input,
+.contato-form textarea {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+  outline: none;
+  border-color: #0052A1;
+}
+
+/* ============================================ */
+/* RODAPÉ                                       */
+/* ============================================ */
+
+.footer {
+  background: #1A1A1A;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-brand {
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  max-height: 40px;
+  margin-bottom: 15px;
+}
+
+.footer-brand p {
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.footer-credits {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+/* ============================================ */
+/* RESPONSIVIDADE (MOBILE-FIRST)                */
+/* ============================================ */
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    gap: 15px;
+  }
+  
+  .nav-list.active {
+    display: flex;
+  }
+  
+  .hero {
+    padding: 120px 0 60px;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-stats {
+    gap: 25px;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .diferenciais-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .videos-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .btn {
+    padding: 12px 24px;
+  }
+  
+  .btn-large {
+    padding: 14px 32px;
+  }
+  
+  .floating-buttons {
+    bottom: 15px;
+    right: 15px;
+    gap: 10px;
+  }
+  
+  .fab-whatsapp, .fab-share {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .fab-whatsapp img {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .servicos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
