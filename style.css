@@ -39,11 +39,23 @@ html, body {
 }
 
 .texto-xc {
-  font-size: 0.9rem;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: 600;
-  color: #004e99;
-  margin-left: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+
+  background: linear-gradient(90deg, #00eaff, #0077ff, #00eaff);
+  background-size: 200%;
+
+  background-clip: text;
+  -webkit-background-clip: text;  /* Adicione esta linha */
+  -webkit-text-fill-color: transparent;
+
+  animation: brilho 3s linear infinite;
+}
+
+@keyframes brilho {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
 }
 
 /* ============================================ */
@@ -478,6 +490,8 @@ html, body {
   text-decoration: none;
   color: #0052A1;
   font-weight: 500;
+  word-break: break-all;  /* ← Força quebra de linha para e-mails longos */
+  overflow-wrap: break-word;  /* ← Alternativa para navegadores modernos */
 }
 
 .contato-item a:hover {
@@ -677,6 +691,42 @@ html, body {
   .video-card iframe {
     height: 200px;
   }
+
+  /* ============================================ */
+  /* CONTATO - MOBILE (corrigir corte)           */
+  /* ============================================ */
+  
+  .contato-grid {
+    gap: 30px;
+  }
+  
+  .contato-form input,
+  .contato-form textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .contato-form button {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+  
+  .contato-item {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .contato-item span {
+    flex-shrink: 0;
+  }
+  
+  .contato-item a {
+    word-break: break-all;
+    font-size: 0.9rem;  /* Reduz ligeiramente o tamanho da fonte */
+  }
+
   
   /* ============================================ */
   /* RODAPÉ - MOBILE (DISTÂNCIA ENCURTADA)       */
