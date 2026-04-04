@@ -38,6 +38,14 @@ html, body {
   padding: 0 20px;
 }
 
+.texto-xc {
+  font-size: 0.9rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+  color: #004e99;
+  margin-left: 15px;
+}
+
 /* ============================================ */
 /* BOTÕES FLUTUANTES                            */
 /* ============================================ */
@@ -568,7 +576,7 @@ html, body {
   }
   
   .logo {
-    max-height: 40px;
+    max-height: 90px;
   }
   
   .nav-list {
