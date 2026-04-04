@@ -22,7 +22,7 @@
   <header class="header">
     <div class="container">
       <div class="logo-area">
-        <img src="img/logo.png" alt="XC Manutenção Elétrica" class="logo">
+        <img src="img/logo_redondo_XC_SF.png" alt="XC Manutenção Elétrica" class="logo">
       </div>
       <nav class="nav-menu">
         <button class="menu-toggle" id="menuToggle">☰</button>
@@ -43,7 +43,12 @@
       <h1 class="hero-title">Soluções Elétricas Profissionais<br><span class="highlight">com Segurança e Qualidade</span></h1>
       <p class="hero-subtitle">Atendimento rápido e especializado para sua residência, empresa ou indústria. Profissionais qualificados e normas técnicas rigorosas.</p>
       <div class="hero-buttons">
-        <a href="https://wa.me/5516982127839?text=Olá! Quero solicitar um orçamento" class="btn btn-primary">📞 Solicitar Orçamento</a>
+        <a href="https://wa.me/5516982127839?text=Olá! Quero solicitar um orçamento" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.38c1.45.8 3.08 1.23 4.79 1.23 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.21c-1.48 0-2.93-.39-4.19-1.13l-.3-.18-3.12.82.83-3.04-.2-.31c-.8-1.3-1.22-2.78-1.22-4.29 0-4.48 3.64-8.12 8.12-8.12s8.12 3.64 8.12 8.12-3.65 8.13-8.12 8.13zm4.46-6.07c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.47-.38-.4-.54-.42-.14-.01-.3-.02-.46-.02-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.69 2.58 4.09 3.62.57.25 1.02.4 1.37.51.57.18 1.09.15 1.5.09.46-.06 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/>
+            </svg>
+            Solicitar Orçamento
+        </a>
         <a href="#contato" class="btn btn-outline">📋 Fale com um especialista</a>
       </div>
       <div class="hero-stats">
@@ -100,10 +105,14 @@
   <!-- DIFERENCIAIS -->
   <section class="diferenciais">
     <div class="container">
+        <!-- IMAGEM ACIMA DO TÍTULO -->
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="img/man_XC.png" alt="Diferenciais XC" style="max-width: 180px; height: auto;">
+        </div>
       <h2 class="section-title">Por que escolher a XC?</h2>
       <div class="diferenciais-grid">
         <div class="diferencial-item">
-          <span class="diferencial-icon">🔧</span>
+          <span class="diferencial-icon">👷​</span>
           <h3>Profissional Qualificado</h3>
           <p>Equipe treinada e certificada, com anos de experiência no mercado.</p>
         </div>
@@ -139,45 +148,56 @@
         <div class="galeria-item"><img src="img/galeria5.jpg" alt="Projeto elétrico 5"></div>
         <div class="galeria-item"><img src="img/galeria6.jpg" alt="Projeto elétrico 6"></div>
       </div>
-      <div class="galeria-message" id="galeriaMessage">
-        <p>📸 Adicione aqui as fotos dos seus projetos. Basta colocar as imagens na pasta <strong>img/</strong> com os nomes <strong>galeria1.jpg, galeria2.jpg</strong>, etc.</p>
-      </div>
     </div>
   </section>
 
   <!-- VÍDEOS -->
-  <section id="videos" class="videos">
-    <div class="container">
-      <h2 class="section-title">Vídeos e Tutoriais</h2>
-      <p class="section-subtitle">Dicas e conteúdos exclusivos sobre elétrica e automação</p>
-      <div class="videos-grid" id="videosGrid">
-        <div class="video-card">
-          <div class="video-placeholder">
-            <span>🎬</span>
-            <p>Insira o código de incorporação do YouTube</p>
-          </div>
-          <h3>Dica de instalação segura</h3>
+    <section id="videos" class="videos">
+        <div class="container">
+            <h2 class="section-title">Vídeos</h2>
+            <p class="section-subtitle">Dicas e conteúdos exclusivos sobre elétrica e automação</p>
+            <div class="videos-grid" id="videosGrid">
+            
+            <!-- Vídeo 1 - Shorts do YouTube -->
+            <div class="video-card">
+                <iframe 
+                    width="100%" 
+                    height="250" 
+                    src="https://www.youtube.com/embed/cvrCNGFPSX4?autoplay=1&loop=1&playlist=cvrCNGFPSX4&mute=1" 
+                    title="Como montar quadro bifásico" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+                <h3>Montagem de quadro bifásico com DR e DPS</h3>
+            </div>
+            
+            <div class="video-card">
+                <iframe 
+                    width="100%" 
+                    height="250" 
+                    src="https://www.youtube.com/embed/IwXCWmIkb00?autoplay=1&loop=1&playlist=IwXCWmIkb00&mute=1" 
+                    title="Montagem de Paineis Industriais" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+                <h3>Montagem de Paineis Industriais</h3>
+            </div>
+            
+            </div>
         </div>
-        <div class="video-card">
-          <div class="video-placeholder">
-            <span>🎬</span>
-            <p>Insira o código de incorporação do YouTube</p>
-          </div>
-          <h3>Automação residencial na prática</h3>
-        </div>
-      </div>
-      <div class="videos-message">
-        <p>📹 Para adicionar vídeos, substitua os placeholders pelo código de incorporação do YouTube (iframe).</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
   <!-- CHAMADA PARA AÇÃO (CTA) -->
   <section class="cta">
     <div class="container">
       <h2>Precisa de um eletricista qualificado?</h2>
       <p>Atendimento rápido, seguro e com garantia. Solicite seu orçamento agora mesmo!</p>
-      <a href="https://wa.me/5516982127839?text=Olá! Quero solicitar um orçamento" class="btn btn-large">📲 Fale agora com um especialista</a>
+      <a href="#contato" class="btn btn-outline">📋 Fale com um especialista</a>
+
     </div>
   </section>
 
@@ -191,13 +211,17 @@
             <span>📞</span>
             <a href="tel:5516982127839">(16) 98212-7839</a>
           </div>
-          <div class="contato-item">
-            <span>💬</span>
-            <a href="https://wa.me/5516982127839?text=Olá! Quero solicitar um orçamento" target="_blank">WhatsApp</a>
-          </div>
+            <div class="contato-item">
+                <span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.38c1.45.8 3.08 1.23 4.79 1.23 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.21c-1.48 0-2.93-.39-4.19-1.13l-.3-.18-3.12.82.83-3.04-.2-.31c-.8-1.3-1.22-2.78-1.22-4.29 0-4.48 3.64-8.12 8.12-8.12s8.12 3.64 8.12 8.12-3.65 8.13-8.12 8.13zm4.46-6.07c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.47-.38-.4-.54-.42-.14-.01-.3-.02-.46-.02-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.69 2.58 4.09 3.62.57.25 1.02.4 1.37.51.57.18 1.09.15 1.5.09.46-.06 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/>
+                    </svg>
+                </span>
+                <a href="https://wa.me/5516982127839?text=Olá! Quero solicitar um orçamento" target="_blank">WhatsApp</a>
+            </div>
           <div class="contato-item">
             <span>📧</span>
-            <a href="mailto:contato@xceletrica.com.br">contato@xceletrica.com.br</a>
+            <a href="mailto:Carlosalexandrejesuscarvalho@gmail.com">Carlosalexandrejesuscarvalho@gmail.com</a>
           </div>
           <div class="contato-item">
             <span>📍</span>
@@ -218,13 +242,14 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-brand">
-        <img src="img/logo.png" alt="XC Manutenção Elétrica" class="footer-logo">
+        <img src="img/logo_redondo_XC_SF.png" alt="XC Manutenção Elétrica" class="footer-logo">
         <p>Soluções elétricas profissionais com segurança e qualidade</p>
       </div>
       <div class="footer-credits">
-        <div style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 2px; flex-wrap: wrap;">
           <span style="font-size: 12px; opacity: 0.7;">Desenvolvido por</span>
-          <img src="img/assinatura.png" alt="TL Tecnologia & Serviço" style="max-width: 120px; height: auto; opacity: 0.8;">
+          <img src="img/Logo_T_&_SF.png" alt="Tecnologia & Serviço" style="max-width: 40px; height: auto; opacity: 0.8;">
+          <img src="img/AssinaturaBR_SF.png" alt="Tecnologia & Serviço" style="max-width: 180px; height: auto; opacity: 0.8;">
         </div>
       </div>
     </div>

@@ -103,7 +103,7 @@ body {
 }
 
 .logo {
-  max-height: 50px;
+  max-height: 100px;
   width: auto;
 }
 
@@ -207,6 +207,7 @@ body {
 .btn-large {
   padding: 16px 40px;
   font-size: 1.1rem;
+  color: #FFFFFF;
 }
 
 .hero-stats {
@@ -376,6 +377,18 @@ body {
 /* VÍDEOS                                       */
 /* ============================================ */
 
+.video-card iframe {
+  border-radius: 15px;
+  width: 100%;
+  height: 350px;
+}
+
+@media (max-width: 600px) {
+  .video-card iframe {
+    height: 175px;
+  }
+}
+
 .videos {
   padding: 80px 0;
   background: white;
@@ -522,8 +535,8 @@ body {
 
 .footer-credits {
   border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 20px;
-  margin-top: 20px;
+  padding-top: 8px;
+  margin-top: 8px;
 }
 
 /* ============================================ */
