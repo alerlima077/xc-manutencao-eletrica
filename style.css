@@ -17,6 +17,21 @@ body {
   scroll-behavior: smooth;
 }
 
+/* ============================================ */
+/* CORREÇÃO DE ROLAGEM LATERAL                  */
+/* ============================================ */
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+* {
+  max-width: 100%;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -99,12 +114,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: nowrap;  /* Mude de wrap para nowrap */
+  flex-wrap: nowrap;
   width: 100%;
 }
 
 .logo {
-  max-height: 45px;  /* Reduza um pouco no celular */
+  max-height: 45px;
   width: auto;
 }
 
@@ -126,13 +141,13 @@ body {
 }
 
 .menu-toggle {
-  display: block;
+  display: none;
   background: none;
   border: none;
   font-size: 28px;
   cursor: pointer;
   color: #0052A1;
-  margin-left: auto;  /* Força o botão para a direita */
+  margin-left: auto;
   padding: 10px;
 }
 
@@ -141,7 +156,7 @@ body {
 /* ============================================ */
 
 .hero {
-  padding: 180px 0 80px;
+  padding: 140px 0 80px;
   background: linear-gradient(135deg, #0052A1 0%, #003d7a 100%);
   color: white;
   text-align: center;
@@ -366,31 +381,9 @@ body {
   transform: scale(1.05);
 }
 
-.galeria-message, .videos-message {
-  text-align: center;
-  margin-top: 30px;
-  padding: 15px;
-  background: rgba(0,82,161,0.1);
-  border-radius: 10px;
-  color: #0052A1;
-  font-size: 0.9rem;
-}
-
 /* ============================================ */
 /* VÍDEOS                                       */
 /* ============================================ */
-
-.video-card iframe {
-  border-radius: 15px;
-  width: 100%;
-  height: 350px;
-}
-
-@media (max-width: 600px) {
-  .video-card iframe {
-    height: 175px;
-  }
-}
 
 .videos {
   padding: 80px 0;
@@ -410,19 +403,10 @@ body {
   text-align: center;
 }
 
-.video-placeholder {
-  background: #e9ecef;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  color: #666;
-}
-
-.video-placeholder span {
-  font-size: 48px;
+.video-card iframe {
+  border-radius: 15px;
+  width: 100%;
+  height: 250px;
 }
 
 .video-card h3 {
@@ -478,6 +462,8 @@ body {
 
 .contato-item span {
   font-size: 24px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .contato-item a {
@@ -538,29 +524,37 @@ body {
 
 .footer-credits {
   border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 15px;   /* Reduza de 20px para 15px */
-  margin-top: 15px;    /* Reduza de 20px para 15px */
+  padding-top: 15px;
+  margin-top: 15px;
 }
 
 .footer-credits div {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;           /* Reduza de 10px para 8px */
+  gap: 8px;
   flex-wrap: wrap;
 }
 
 .footer-credits span {
   font-size: 12px;
   opacity: 0.7;
-  line-height: 1;      /* Adicione para reduzir altura da linha */
+  line-height: 1;
 }
 
 .footer-credits img {
-  max-width: 100px;    /* Reduza de 120px para 100px */
+  max-width: 100px;
   height: auto;
   opacity: 0.8;
-  vertical-align: middle;  /* Alinha verticalmente */
+  vertical-align: middle;
+}
+
+/* ============================================ */
+/* AJUSTE DE SCROLL PARA HEADER FIXO            */
+/* ============================================ */
+
+#home, #servicos, #galeria, #videos, #contato {
+  scroll-margin-top: 85px;
 }
 
 /* ============================================ */
@@ -568,23 +562,13 @@ body {
 /* ============================================ */
 
 @media (max-width: 768px) {
-  /* CABEÇALHO - Corrige menu hamburguinho sumindo */
-  .header .container {
-    flex-wrap: nowrap;
-  }
-  
+  /* CABEÇALHO - Menu hamburguinho */
   .menu-toggle {
     display: block;
-    margin-left: auto;
-    padding: 10px;
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: #0052A1;
   }
   
   .logo {
-    max-height: 45px;
+    max-height: 40px;
   }
   
   .nav-list {
@@ -606,9 +590,9 @@ body {
     display: flex;
   }
   
-  /* HERO - Corrige conteúdo sendo coberto pelo header */
+  /* HERO */
   .hero {
-    padding: 160px 0 60px;
+    padding: 140px 0 60px;
   }
   
   .hero-title {
@@ -681,22 +665,47 @@ body {
     height: 26px;
   }
   
-  /* RODAPÉ - Corrige assinatura muito distante */
+  /* VÍDEOS */
+  .video-card iframe {
+    height: 200px;
+  }
+  
+  /* ============================================ */
+  /* RODAPÉ - MOBILE (DISTÂNCIA ENCURTADA)       */
+  /* ============================================ */
+  
+  .footer {
+    padding: 25px 0 20px;  /* Reduz padding geral */
+  }
+  
+  .footer-brand {
+    margin-bottom: 5px;    /* ENCURTA DISTÂNCIA */
+  }
+  
+  .footer-logo {
+    margin-bottom: 5px;    /* ENCURTA DISTÂNCIA */
+  }
+  
+  .footer-brand p {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+  }
+  
   .footer-credits {
-    padding-top: 12px;
-    margin-top: 12px;
+    padding-top: 8px;      /* REDUZ espaço superior */
+    margin-top: 0;         /* REMOVE margem superior */
   }
   
   .footer-credits div {
-    gap: 6px;
+    gap: 4px;              /* Espaço menor entre itens */
   }
   
   .footer-credits img {
-    max-width: 90px;
-    vertical-align: middle;
+    max-width: 70px;       /* Imagem um pouco menor */
   }
   
   .footer-credits span {
+    font-size: 10px;
     line-height: 1;
   }
 }
