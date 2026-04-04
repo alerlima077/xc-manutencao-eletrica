@@ -99,11 +99,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;  /* Mude de wrap para nowrap */
+  width: 100%;
 }
 
 .logo {
-  max-height: 100px;
+  max-height: 45px;  /* Reduza um pouco no celular */
   width: auto;
 }
 
@@ -125,12 +126,14 @@ body {
 }
 
 .menu-toggle {
-  display: none;
+  display: block;
   background: none;
   border: none;
   font-size: 28px;
   cursor: pointer;
   color: #0052A1;
+  margin-left: auto;  /* Força o botão para a direita */
+  padding: 10px;
 }
 
 /* ============================================ */
@@ -138,7 +141,7 @@ body {
 /* ============================================ */
 
 .hero {
-  padding: 140px 0 80px;
+  padding: 180px 0 80px;
   background: linear-gradient(135deg, #0052A1 0%, #003d7a 100%);
   color: white;
   text-align: center;
@@ -535,8 +538,29 @@ body {
 
 .footer-credits {
   border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 8px;
-  margin-top: 8px;
+  padding-top: 15px;   /* Reduza de 20px para 15px */
+  margin-top: 15px;    /* Reduza de 20px para 15px */
+}
+
+.footer-credits div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;           /* Reduza de 10px para 8px */
+  flex-wrap: wrap;
+}
+
+.footer-credits span {
+  font-size: 12px;
+  opacity: 0.7;
+  line-height: 1;      /* Adicione para reduzir altura da linha */
+}
+
+.footer-credits img {
+  max-width: 100px;    /* Reduza de 120px para 100px */
+  height: auto;
+  opacity: 0.8;
+  vertical-align: middle;  /* Alinha verticalmente */
 }
 
 /* ============================================ */
@@ -544,25 +568,47 @@ body {
 /* ============================================ */
 
 @media (max-width: 768px) {
+  /* CABEÇALHO - Corrige menu hamburguinho sumindo */
+  .header .container {
+    flex-wrap: nowrap;
+  }
+  
   .menu-toggle {
     display: block;
+    margin-left: auto;
+    padding: 10px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #0052A1;
+  }
+  
+  .logo {
+    max-height: 45px;
   }
   
   .nav-list {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: white;
     display: none;
     flex-direction: column;
-    width: 100%;
     text-align: center;
     padding: 20px 0;
     gap: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    z-index: 100;
   }
   
   .nav-list.active {
     display: flex;
   }
   
+  /* HERO - Corrige conteúdo sendo coberto pelo header */
   .hero {
-    padding: 120px 0 60px;
+    padding: 160px 0 60px;
   }
   
   .hero-title {
@@ -579,6 +625,11 @@ body {
   
   .stat-number {
     font-size: 1.5rem;
+  }
+  
+  /* Compensa o header fixo em todos os links âncora */
+  section {
+    scroll-margin-top: 85px;
   }
   
   .section-title {
@@ -613,6 +664,7 @@ body {
     padding: 14px 32px;
   }
   
+  /* BOTÕES FLUTUANTES */
   .floating-buttons {
     bottom: 15px;
     right: 15px;
@@ -627,6 +679,25 @@ body {
   .fab-whatsapp img {
     width: 26px;
     height: 26px;
+  }
+  
+  /* RODAPÉ - Corrige assinatura muito distante */
+  .footer-credits {
+    padding-top: 12px;
+    margin-top: 12px;
+  }
+  
+  .footer-credits div {
+    gap: 6px;
+  }
+  
+  .footer-credits img {
+    max-width: 90px;
+    vertical-align: middle;
+  }
+  
+  .footer-credits span {
+    line-height: 1;
   }
 }
 
