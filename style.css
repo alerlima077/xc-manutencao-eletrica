@@ -388,6 +388,7 @@ html, body {
 .galeria-item {
   overflow: hidden;
   border-radius: 10px;
+  background: #e9ecef;
 }
 
 .galeria-item img {
@@ -693,6 +694,21 @@ html, body {
   .video-card iframe {
     height: 200px;
   }
+
+  /* GALERIA - MOBILE (imagens sem corte) */
+.galeria-item {
+  width: 100%;
+  max-width: 100%;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;   /* Muda de cover para contain no mobile */
+  background: #e9ecef;   /* Fundo para preencher espaços vazios */
+  border-radius: 10px;
+}
 
   /* ============================================ */
   /* CONTATO - MOBILE (corrigir corte)           */
