@@ -522,6 +522,55 @@ html, body {
   border-color: #0052A1;
 }
 
+/* =========================
+   GALERIA INCÊNDIO 🔥
+========================= */
+
+.galeria-incendio .galeria-item {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #b30000; /* vermelho forte */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(179, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-incendio .galeria-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+}
+
+/* imagem */
+.galeria-incendio img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.galeria-incendio .galeria-item:hover img {
+  transform: scale(1.1);
+}
+
+/* overlay */
+.galeria-incendio .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(179, 0, 0, 0.85);
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.galeria-incendio .galeria-item:hover .overlay {
+  opacity: 1;
+}
+
 /* ============================================ */
 /* RODAPÉ                                       */
 /* ============================================ */
@@ -743,6 +792,55 @@ html, body {
   .contato-item a {
     word-break: break-all;
     font-size: 0.9rem;  /* Reduz ligeiramente o tamanho da fonte */
+  }
+
+  /* =========================
+   GALERIA INCÊNDIO 🔥
+  ========================= */
+
+  .galeria-incendio .galeria-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #b30000; /* vermelho forte */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(179, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .galeria-incendio .galeria-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+  }
+
+  /* imagem */
+  .galeria-incendio img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .galeria-incendio .galeria-item:hover img {
+    transform: scale(1.1);
+  }
+
+  /* overlay */
+  .galeria-incendio .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(179, 0, 0, 0.85);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .galeria-incendio .galeria-item:hover .overlay {
+    opacity: 1;
   }
 
   
